@@ -29,7 +29,7 @@ public class ClienteView implements Serializable{
 	
 	public void loadClientes() {
 		try {
-			this.clientes = clienteService.findAll();
+		this.clientes = clienteService.findAll();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.err.println(e.getMessage());
