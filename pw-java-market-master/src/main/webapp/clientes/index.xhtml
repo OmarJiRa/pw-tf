@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Lista de clientes</title>
+</h:head>
+
+<h:body>
+
+	<p:breadCrumb>
+		<p:menuitem value="Categories" url="#" />
+		<p:menuitem value="Sports" url="#" />
+		<p:menuitem value="Basketball" url="#" />
+		<p:menuitem value="NBA" url="#" />
+		<p:menuitem value="Teams" url="#" />
+		<p:menuitem value="L.A. Lakers" url="#" />
+		<p:menuitem value="Roster" url="#" />
+		<p:menuitem value="Kobe Bryant" url="#" />
+	</p:breadCrumb>
+	 
+	<h1>Clientes:</h1>
+
+	<p:dataTable var="cliente" value="#{dtClienteView.clientes}">
+		<p:column headerText="Id">
+			<h:outputText value="#{car.id}" />
+		</p:column>
+
+		<p:column headerText="Nombres y Apellidos">
+			<h:outputText value="#{cliente.nombresApellidos}" />
+		</p:column>
+
+		<p:column headerText="Numero de documento">
+			<h:outputText value="#{cliente.numeroDocumento}" />
+		</p:column>
+
+		<p:column headerText="Direccion">
+			<h:outputText value="#{cliente.direccion}" />
+		</p:column>
+
+		<p:column headerText="Distrito">
+			<h:outputText value="#{cliente.distrito.nombre}" />
+		</p:column>
+
+		<p:column headerText="Telefono">
+			<h:outputText value="#{cliente.telefono}" />
+		</p:column>
+
+		<p:column headerText="Email">
+			<h:outputText value="#{cliente.email}" />
+		</p:column>
+	</p:dataTable>
+
+
+</h:body>
+</html>
